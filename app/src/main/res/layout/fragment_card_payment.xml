@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+
+        android:id="@+id/paymentInstractions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/coming_soon"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/card_payment_message"
+        android:textColor="@color/menu_items"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+
+        <EditText
+
+            android:id="@+id/ed_names"
+            android:layout_weight="1"
+
+            android:hint="Names"
+            android:paddingLeft="10dp"
+            android:background="@drawable/parking_categories_shape"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textColorHint="@color/dark_grey"
+            android:inputType="none"
+            android:focusable="false"
+            android:clickable="false" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/ed_card_number"
+        android:layout_marginTop="5dp"
+        android:hint="Card Number"
+        android:paddingLeft="10dp"
+        android:background="@drawable/parking_categories_shape"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColorHint="@color/dark_grey"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="false" />
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:maxLength="2"
+                android:id="@+id/ed_month"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:inputType="none"
+                android:hint="MM"
+                android:paddingLeft="10dp"
+                android:background="@drawable/parking_categories_shape"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textColorHint="@color/dark_grey"
+                android:focusable="false"
+                android:clickable="false" />
+
+            <EditText
+                android:maxLength="2"
+                android:id="@+id/ed_year"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:inputType="none"
+                android:hint="YY"
+                android:paddingLeft="10dp"
+                android:background="@drawable/parking_categories_shape"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textColorHint="@color/dark_grey"
+                android:focusable="false"
+                android:clickable="false" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ed_cvv"
+            android:layout_weight="0.5"
+            android:inputType="none"
+            android:hint="CVV"
+            android:paddingLeft="10dp"
+            android:background="@drawable/parking_categories_shape"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textColorHint="@color/dark_grey"
+            android:focusable="false"
+            android:clickable="false" />
+
+
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/payment_button"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+
+        android:text="Proceed"
+        android:background="@drawable/button_shape" />-->
+</android.support.constraint.ConstraintLayout>

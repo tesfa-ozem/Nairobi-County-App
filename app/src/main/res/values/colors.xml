@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#33691e</color>
+    <color name="colorPrimaryDark">#003d00</color>
+    <color name="colorAccent">#629749</color>
+    <color name="primaryLightColor">#629749</color>
+    <color name="primaryDarkColor">#003d00</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#808080</color>
+    <color name="dimgray">#696969</color>
+    <color name="green">#008000</color>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#34495e</color>
+    <color name="light_grey_semi_transparent">#80313435</color>
+    <color name="menu_items">#696969</color>
+    <color name="light_gray">#C7C7C7</color>
+    <color name="text_icon_color">#3C6470</color>
+
+
+    <!--colros for card-->
+</resources>

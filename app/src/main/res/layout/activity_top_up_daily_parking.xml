@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_up"
+
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:layout_marginBottom="100dp"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <Button
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+
+        android:background="@drawable/button_shape"
+        android:text="Proceed"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/parking_categories_shape"
+        android:hint="Number Plate"
+        android:inputType="textCapCharacters"
+        android:paddingStart="20dp"
+        android:paddingLeft="12dp"
+
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/dark_grey"
+        tools:ignore="RtlSymmetry" />
+
+
+    <ImageView
+
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:paddingLeft="20dp"
+        android:src="@drawable/powered_nbk" />
+
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/parking_categories_shape"
+        app:hintText="Select Parking Category" />
+
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/parking_categories_shape"
+        app:hintText="Select Vehicle Category"
+
+        />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/parking_categories_shape"
+        android:visibility="gone"
+        app:hintText="Select Zone Category" />
+
+
+</LinearLayout>
