@@ -21,12 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:src="@drawable/ic_share" />
-
         <LinearLayout
             android:id="@+id/receipt_back"
             android:layout_width="wrap_content"
@@ -45,6 +39,12 @@
                 android:textColor="@color/white" />
         </LinearLayout>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_share" />
+
     </FrameLayout>
 
     <LinearLayout
@@ -62,6 +62,89 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
         app:layout_constraintVertical_bias="0.161">
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/nairobi_city_county_logo_seeklog" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="25dp"
+                 android:layout_marginTop="25dp"
+                 android:text="Thursday"
+                 android:textColor="@color/black"
+                 android:textSize="16dp"
+                 android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/receipt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="sans-serif-light"
+                android:text=",17th April 2019 "
+                android:textColor="@color/dimgray"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/receipt_number_plate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="" />
+
+            <TextView
+                android:id="@+id/receipt_street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Jaramogi Odinga Odinga Street "
+                android:textColor="@color/dimgray"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:id="@+id/stream_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="DAILY PARKING"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -115,6 +198,22 @@
                 android:textSize="16dp" />
 
         </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/black" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_of_cars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -172,109 +271,10 @@
         <ImageView
             android:layout_width="85dp"
             android:layout_height="67dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/nairobi_city_county_logo_seeklog" />
-
-        <ImageView
-            android:layout_width="85dp"
-            android:layout_height="67dp"
             android:layout_gravity="left"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="10dp"
 
             android:src="@drawable/powered_nbk" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <!-- <TextView
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_marginLeft="25dp"
-                 android:layout_marginTop="25dp"
-                 android:text="Thursday"
-                 android:textColor="@color/black"
-                 android:textSize="16dp"
-                 android:textStyle="bold" />-->
-
-            <TextView
-                android:id="@+id/receipt_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="25dp"
-                android:fontFamily="sans-serif-light"
-                android:text=",17th April 2019 "
-                android:textColor="@color/dimgray"
-                android:textSize="14dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/receipt_number_plate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="25dp"
-                android:text=""
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="" />
-
-            <TextView
-                android:id="@+id/receipt_street"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Jaramogi Odinga Odinga Street "
-                android:textColor="@color/dimgray"
-                android:textSize="16dp"
-                android:textStyle="normal" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-
-                android:id="@+id/stream_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="DAILY PARKING"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="5dp"
-            android:background="@color/black" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/list_of_cars"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </android.support.v7.widget.RecyclerView>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

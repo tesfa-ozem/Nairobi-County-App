@@ -14,22 +14,13 @@
 
         <ImageView
             android:id="@+id/back_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="start"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:layout_gravity="start"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/ic_back_button"
             android:visibility="gone" />
-        <ImageView
-            android:id="@+id/cancel_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:src="@drawable/cancel" />
-
         <TextView
 
             android:layout_width="wrap_content"
@@ -44,6 +35,15 @@
             android:textSize="18dp"
             android:textStyle="bold" />
 
+        <ImageView
+            android:id="@+id/cancel_action"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/cancel" />
+
 
     </FrameLayout>
 
@@ -52,25 +52,10 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/check_land"
             android:layout_width="match_parent"
             android:layout_height="500dp"
+            android:id="@+id/check_land"
             android:orientation="vertical">
-
-
-            <Button
-                android:id="@+id/check_business_status"
-                android:layout_width="240dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/button_shape"
-                android:text="Check Status"
-                android:textColor="@color/white"
-
-                />
 
 
             <EditText
@@ -87,15 +72,30 @@
                 android:textColor="@android:color/black"
                 android:textColorHint="@color/dark_grey" />
 
+
             <ImageView
 
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:layout_gravity="bottom"
                 android:layout_marginTop="50dp"
-                android:layout_marginBottom="500dp"
                 android:paddingLeft="20dp"
+                android:layout_width="80dp"
+                android:layout_gravity="bottom"
+                android:layout_height="40dp"
+                android:layout_marginBottom="500dp"
                 android:src="@drawable/powered_nbk" />
+
+            <Button
+                android:id="@+id/check_business_status"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:text="Check Status"
+                android:textColor="@color/white"
+
+                />
 
             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
                 android:id="@+id/business_year"

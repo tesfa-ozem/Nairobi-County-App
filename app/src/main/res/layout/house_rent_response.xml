@@ -28,9 +28,9 @@
             android:id="@+id/advance_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_gravity="left"
             android:text="KSH 0.0"
+            android:layout_alignParentRight="true"
             android:textColor="@android:color/black" />
     </RelativeLayout>
 

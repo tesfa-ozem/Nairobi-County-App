@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".fragments.payments.MobileMoneyFragment"
+    android:orientation="vertical"
 
     >
 
     <LinearLayout
-        android:id="@+id/edit_amount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="vertical"
+        android:id="@+id/edit_amount"
+        android:gravity="center"
         android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+
+            android:text="Amount To Pay"
+            android:textColor="@color/black" />
 
         <EditText
 
@@ -31,21 +38,13 @@
             android:paddingLeft="12dp"
             android:textColor="@android:color/black"
             android:textColorHint="@color/dark_grey" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-
-            android:text="Amount To Pay"
-            android:textColor="@color/black" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:orientation="vertical"
+        android:layout_marginTop="10dp"
 
         >
 
@@ -55,12 +54,12 @@
             android:layout_height="30dp"
 
             android:layout_gravity="center"
-            android:background="@drawable/parking_categories_shape"
-            android:hint="072.."
             android:inputType="phone"
-            android:paddingStart="12dp"
             android:paddingLeft="12dp"
             android:textColor="@android:color/black"
+            android:background="@drawable/parking_categories_shape"
+            android:hint="072.."
+            android:paddingStart="12dp"
             android:textColorHint="@color/dark_grey" />
         <TextView
             android:layout_width="wrap_content"
@@ -79,13 +78,13 @@
         android:gravity="center"
         android:orientation="horizontal">
     <Button
+        android:layout_gravity="center"
         android:id="@+id/payment_button"
         android:layout_width="80dp"
         android:layout_height="35dp"
-        android:layout_gravity="center"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
 
         android:layout_marginBottom="30dp"
         android:background="@drawable/button_shape"
@@ -96,11 +95,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/manual_mpesa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp"
+        android:id="@+id/manual_mpesa"
         android:visibility="gone">
 
         <TextView

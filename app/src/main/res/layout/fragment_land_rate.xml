@@ -1,10 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/bottom_sheet_behavior"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
 
     >
 
@@ -18,22 +18,13 @@
 
         <ImageView
             android:id="@+id/back_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
             android:layout_gravity="start"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/ic_back_button"
             android:visibility="gone" />
-        <ImageView
-            android:id="@+id/cancel_action"
-            android:layout_width="21dp"
-            android:layout_height="22dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:src="@drawable/cancel" />
-
         <TextView
 
             android:layout_width="wrap_content"
@@ -47,6 +38,15 @@
             android:textColor="@android:color/black"
             android:textSize="18dp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cancel_action"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/cancel" />
 
 
     </FrameLayout>
@@ -71,19 +71,6 @@
             android:visibility="visible">
 
 
-            <Button
-                android:id="@+id/statusLand"
-                android:layout_width="240dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/button_shape"
-                android:text="CHECK STATUS"
-                android:windowSoftInputMode="stateAlwaysVisible" />
-
-
             <EditText
 
                 android:id="@+id/plotNumber"
@@ -98,6 +85,19 @@
                 android:textColor="@android:color/black"
                 android:textColorHint="@color/dark_grey" />
 
+
+            <Button
+                android:id="@+id/statusLand"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:text="CHECK STATUS"
+                android:windowSoftInputMode="stateAlwaysVisible" />
+
             <ImageView
 
                 android:layout_width="80dp"
@@ -109,11 +109,11 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/landRateCard"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_marginTop="20dp"
             android:orientation="vertical"
             android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:visibility="gone">
 
             <Button
@@ -122,27 +122,27 @@
                 android:layout_width="240dp"
                 android:layout_height="40dp"
 
-                android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/button_shape"
                 android:text="Proceed To Pay"
                 android:textColor="@android:color/white"
+                android:layout_gravity="center"
                 android:visibility="gone" />
 
             <LinearLayout
 
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:padding="10dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Plot Number"
                     android:textColor="@color/black"
-
                     android:textSize="18dp"
+
+                    android:layout_width="wrap_content"
                     android:textStyle="bold" />
 
                 <TextView
@@ -157,25 +157,25 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:padding="10dp">
 
                 <TextView
+                    android:textSize="18dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Plot Owner"
-                    android:textColor="@color/black"
 
-                    android:textSize="18dp"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/plotOwner"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     tools:text="CBD" />
             </LinearLayout>
@@ -185,24 +185,24 @@
                 android:layout_width="match_parent"
 
 
-                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Address"
                     android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:layout_height="wrap_content"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/address"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     tools:text="Nairob" />
             </LinearLayout>
@@ -212,24 +212,24 @@
                 android:layout_width="match_parent"
 
 
-                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="UPN"
                     android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:layout_height="wrap_content"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/upn_land"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     tools:text="Nairob" />
             </LinearLayout>
@@ -239,8 +239,8 @@
                 android:layout_width="match_parent"
 
 
-                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:padding="10dp">
 
                 <TextView
@@ -266,24 +266,24 @@
                 android:layout_width="match_parent"
 
 
-                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Penalty"
                     android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:layout_height="wrap_content"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/penalty"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     tools:text="KSH 0.0" />
             </LinearLayout>
@@ -293,24 +293,24 @@
                 android:layout_width="match_parent"
 
 
-                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Ground Rent"
                     android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:layout_height="wrap_content"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/ground_Rent"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     tools:text="KSH 0.0" />
             </LinearLayout>
@@ -320,24 +320,24 @@
                 android:layout_width="match_parent"
 
 
-                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Annual Amount"
                     android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:layout_height="wrap_content"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/annual_amount"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     tools:text="KSH 0.0" />
             </LinearLayout>
@@ -347,35 +347,35 @@
                 android:layout_width="match_parent"
 
 
-                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Total Arrears"
                     android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:layout_height="wrap_content"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/total_arrears"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     tools:text="KSH 0.0" />
             </LinearLayout>
 
             <LinearLayout
 
-                android:layout_width="match_parent"
-
-
                 android:layout_height="wrap_content"
+
+
                 android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:padding="10dp">
 
                 <TextView
@@ -389,35 +389,35 @@
                 <TextView
                     android:id="@+id/current_balance"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     tools:text="KSH 0.0" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
                 android:layout_gravity="right"
+                android:layout_width="wrap_content"
+
                 android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:paddingTop="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Amount"
                     android:textColor="@color/primaryDarkColor"
+                    android:text="Amount"
                     android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/EamountToPay"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="30dp"
                     tools:text="KSH 0.0" />
             </LinearLayout>
@@ -431,17 +431,17 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Arrears"
                     android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:layout_height="wrap_content"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     tools:text="KSH 0.0" />
             </LinearLayout>

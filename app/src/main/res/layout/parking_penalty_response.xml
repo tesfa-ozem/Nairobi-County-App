@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/parking_status_response"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:id="@+id/parking_status_response"
     android:visibility="gone">
 
     <LinearLayout
@@ -19,6 +19,12 @@
         android:paddingLeft="10dp">
 
 
+        <FrameLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
         <Button
             android:id="@+id/pay_penalty"
             android:layout_width="240dp"
@@ -30,12 +36,6 @@
             android:background="@drawable/button_shape"
             android:text="PAY"
             android:textColor="@color/white" />
-
-        <FrameLayout
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp" />
         <!--<LinearLayout
             android:id="@+id/penalty_status"
             android:layout_width="wrap_content"
@@ -64,6 +64,13 @@
                 tools:text="No penalty" />
         </LinearLayout>-->
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/penalties"
+            android:layout_width="362dp"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
         <ImageView
 
             android:layout_width="80dp"
@@ -72,13 +79,6 @@
 
             android:paddingLeft="20dp"
             android:src="@drawable/powered_nbk" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/penalties"
-            android:layout_width="362dp"
-            android:layout_height="wrap_content">
-
-        </android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
 

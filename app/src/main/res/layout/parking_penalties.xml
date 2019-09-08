@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <FrameLayout
@@ -16,21 +16,12 @@
 
         <ImageView
             android:id="@+id/back_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
             android:layout_gravity="start"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:src="@drawable/ic_back_button" />
-
-        <ImageView
-            android:id="@+id/cancel_action"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:src="@drawable/cancel" />
+            android:src="@drawable/ic_back_button" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,6 +35,15 @@
             android:textColor="@android:color/black"
             android:textSize="18dp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cancel_action"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/cancel" />
 
 
     </FrameLayout>
@@ -78,18 +78,26 @@
                 android:id="@+id/penalty_number_plate"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
-                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/parking_categories_shape"
-                android:hint="Number Plate"
+                android:layout_gravity="center"
                 android:inputType="textCapCharacters"
-                android:paddingStart="12dp"
                 android:paddingLeft="12dp"
-
                 android:textColor="@android:color/black"
+                android:background="@drawable/parking_categories_shape"
                 android:textColorHint="@color/dark_grey"
+
+                android:hint="Number Plate"
+                android:paddingStart="12dp"
                 tools:ignore="RtlSymmetry" />
 
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:text="All input fields are required"
+                android:textColor="@color/gray"
+                android:textSize="12dp" />
 
             <ImageView
 
@@ -99,14 +107,6 @@
                 android:layout_marginBottom="100dp"
                 android:paddingLeft="20dp"
                 android:src="@drawable/powered_nbk" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
-                android:text="All input fields are required"
-                android:textColor="@color/gray"
-                android:textSize="12dp" />
         </LinearLayout>
 
         <include layout="@layout/parking_penalty_response" />

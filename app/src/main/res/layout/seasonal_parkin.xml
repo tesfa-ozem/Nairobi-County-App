@@ -5,8 +5,8 @@
     android:id="@+id/multiple_seasonal"
     android:layout_width="match_parent"
     android:layout_height="500dp"
-    android:animateLayoutChanges="true"
     android:visibility="gone"
+    android:animateLayoutChanges="true"
     tools:layout_editor_absoluteY="25dp">
 
     <Button
@@ -108,8 +108,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:fontFamily="@font/roboto_medium"
                 android:text="Swipe to delete"
+                android:fontFamily="@font/roboto_medium"
                 android:textColor="@color/gray"
                 android:textSize="14sp" />
 
@@ -133,21 +133,6 @@
 
 
     <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-        android:id="@+id/sn_duration_categories"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/parking_categories_shape"
-        app:hintText="Select Duration Category"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sn_vehicle_category" />
-
-    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
         android:id="@+id/sn_vehicle_category"
         android:layout_width="300dp"
         android:layout_height="40dp"
@@ -163,4 +148,19 @@
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/sn_duration_categories"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/parking_categories_shape"
+        app:hintText="Select Duration Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sn_vehicle_category" />
 </android.support.constraint.ConstraintLayout>

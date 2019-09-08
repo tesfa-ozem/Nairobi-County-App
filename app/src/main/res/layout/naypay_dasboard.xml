@@ -21,9 +21,22 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <include
+                layout="@layout/activity_main"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.5" />
+            <!--<com.daimajia.slider.library.SliderLayout
+                app:indicator_visibility="invisible"
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />-->
+
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -33,19 +46,6 @@
                 app:layout_collapseMode="pin">
 
             </android.support.v7.widget.Toolbar>
-            <!--<com.daimajia.slider.library.SliderLayout
-                app:indicator_visibility="invisible"
-                android:id="@+id/slider"
-                android:layout_width="match_parent"
-                android:layout_height="200dp" />-->
-
-
-            <include
-                layout="@layout/activity_main"
-                android:fitsSystemWindows="true"
-                android:scaleType="centerCrop"
-                app:layout_collapseMode="parallax"
-                app:layout_collapseParallaxMultiplier="0.5" />
 
             <!-- <ImageView
                  android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                         android:textColor="@color/white" />
                 </com.balysv.materialripple.MaterialRippleLayout>
 
-                <com.balysv.materialripple.MaterialRippleLayout
+                <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:mrl_rippleColor="#CED0E3E6"
@@ -134,11 +134,11 @@
             </LinearLayout>
 
             <android.support.v7.widget.RecyclerView
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginRight="5px"
-                android:visibility="gone"
 
 
                 />
@@ -148,6 +148,7 @@
     </android.support.v4.widget.NestedScrollView>
 
     <include layout="@layout/bottom_sheet_parking" />
+
 
     <!--Row 3-->
 </android.support.design.widget.CoordinatorLayout>

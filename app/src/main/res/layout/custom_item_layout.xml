@@ -1,13 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
     android:orientation="vertical"
+    android:layout_width="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="5dp"
     android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="5dp"
     android:paddingBottom="5dp">
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,9 +18,9 @@
 
 
         <LinearLayout
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:orientation="horizontal">
 
             <!--<RelativeLayout
@@ -64,10 +64,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
 
-                    android:layout_marginLeft="60dp"
-                    android:gravity="center"
                     android:text="KSH 200"
                     android:textColor="@color/black"
+                    android:layout_marginLeft="60dp"
+                    android:gravity="center"
                     android:textSize="20dp" />
 
             </LinearLayout>

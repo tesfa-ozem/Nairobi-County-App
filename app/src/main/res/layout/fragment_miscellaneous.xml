@@ -14,22 +14,13 @@
 
         <ImageView
             android:id="@+id/back_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
             android:layout_gravity="start"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:src="@drawable/ic_back_button"
-            android:visibility="gone" />
-        <ImageView
-            android:id="@+id/cancel_action"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:src="@drawable/cancel" />
-
+            android:src="@drawable/ic_back_button"
+            android:visibility="gone" />
         <TextView
 
             android:layout_width="wrap_content"
@@ -43,6 +34,15 @@
             android:textColor="@android:color/black"
             android:textSize="18dp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cancel_action"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/cancel" />
 
 
     </FrameLayout>
@@ -91,11 +91,11 @@
 
             <ImageView
 
+                android:layout_marginBottom="500dp"
+                android:paddingLeft="20dp"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_gravity="bottom"
-                android:layout_marginBottom="500dp"
-                android:paddingLeft="20dp"
                 android:src="@drawable/powered_nbk" />
 
             <TextView
@@ -165,12 +165,12 @@
                         android:id="@+id/discription"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
                         android:layout_weight="1"
-                        android:textAlignment="textEnd"
                         android:textColor="@android:color/black"
                         android:textSize="18dp"
                         android:textStyle="normal"
+                        android:layout_gravity="end"
+                        android:textAlignment="textEnd"
                         tools:text="" />
                 </LinearLayout>
 
@@ -196,12 +196,12 @@
                         android:id="@+id/client_name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
                         android:layout_weight="1"
-                        android:textAlignment="textEnd"
                         android:textColor="@android:color/black"
                         android:textSize="18dp"
                         android:textStyle="normal"
+                        android:layout_gravity="end"
+                        android:textAlignment="textEnd"
                         tools:text="" />
                 </LinearLayout>
 
@@ -226,12 +226,12 @@
                         android:id="@+id/date_raised"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
                         android:layout_weight="1"
-                        android:textAlignment="textEnd"
+                        android:layout_gravity="end"
                         android:textColor="@android:color/black"
                         android:textSize="18dp"
                         android:textStyle="normal"
+                        android:textAlignment="textEnd"
                         tools:text="" />
                 </LinearLayout>
 
@@ -256,12 +256,12 @@
                         android:id="@+id/amount_topay"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
                         android:layout_weight="1"
+                        android:layout_gravity="end"
                         android:text="KES 200"
-                        android:textAlignment="textEnd"
                         android:textColor="@android:color/black"
                         android:textSize="20dp"
+                        android:textAlignment="textEnd"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -288,12 +288,12 @@
                         android:id="@+id/ms_bill_number"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
                         android:layout_weight="1"
-                        android:textAlignment="textEnd"
                         android:textColor="@android:color/black"
                         android:textSize="18dp"
                         android:textStyle="normal"
+                        android:layout_gravity="end"
+                        android:textAlignment="textEnd"
                         tools:text="YUU788kk" />
                 </LinearLayout>
 

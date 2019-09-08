@@ -2,6 +2,7 @@ package com.aw.epayments.fragments
 
 import android.annotation.SuppressLint
 import android.graphics.Color
+import android.opengl.Visibility
 import android.os.Build
 import android.os.Bundle
 import android.support.annotation.RequiresApi
@@ -12,16 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.ProgressBar
-import android.widget.ScrollView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 
 import com.aw.epayments.R
 import com.aw.epayments.api.Api
@@ -320,17 +312,23 @@ class HouseRentFragment : BottomSheetDialogFragment() {
         var gson = Gson()
         val houseResponse = gson.fromJson(result, HouseNumberBase::class.java)
         if (houseResponse.status_code == 200) {
-
-            Upn.clear()
-            rent_balance.clear()
-            for (x in houseResponse.response_data) {
-                tenancyId[x.houseNumber] = x.houseNumber
-                arrayListhseNumber.add(x.houseNumber)
-                Upn[x.houseNumber] = x.uHN
-                rent_balance[x.houseNumber] = x.currentBalance
-                rentIfo[x.houseNumber] = x
+            if(houseResponse.response_data.isNotEmpty()){
+                spinerHseNumber!!.visibility = View.VISIBLE
+                Upn.clear()
+                rent_balance.clear()
+                for (x in houseResponse.response_data) {
+                    tenancyId[x.houseNumber] = x.houseNumber
+                    arrayListhseNumber.add(x.houseNumber)
+                    Upn[x.houseNumber] = x.uHN
+                    rent_balance[x.houseNumber] = x.currentBalance
+                    rentIfo[x.houseNumber] = x
+                }
+                spinerHseNumber!!.adapter = adapter_hse_number
+            }else{
+                spinerHseNumber!!.visibility = View.GONE
+                Toast.makeText(context,"No Houses Available",Toast.LENGTH_LONG).show()
             }
-            spinerHseNumber!!.adapter = adapter_hse_number
+
         }
     }
 

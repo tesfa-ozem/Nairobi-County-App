@@ -16,8 +16,8 @@ class History : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
 
-        tabLayout = findViewById<TabLayout>(R.id.tabLayout)
-        viewPager = findViewById<ViewPager>(R.id.viewPager)
+        /*tabLayout = findViewById<TabLayout>(R.id.tabLayout)
+        viewPager = findViewById<ViewPager>(R.id.viewPager)*/
 
         tabLayout!!.addTab(tabLayout!!.newTab().setText("All"),0)
         tabLayout!!.addTab(tabLayout!!.newTab().setText("Parking"))
