@@ -1,7 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
     <FrameLayout
@@ -37,15 +37,23 @@
 
         <ImageView
             android:id="@+id/cancel_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:layout_gravity="end"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/cancel" />
 
 
     </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:text="All input fields are required"
+        android:textSize="12dp"
+        android:textColor="@color/gray" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -54,8 +62,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:id="@+id/check_land"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/check_land">
 
 
             <EditText
@@ -63,25 +71,24 @@
                 android:id="@+id/businesNumber"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
-                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/parking_categories_shape"
-                android:hint="Enter Business Number"
+                android:layout_gravity="center"
                 android:inputType="textCapCharacters"
                 android:paddingLeft="20dp"
                 android:textColor="@android:color/black"
-                android:textColorHint="@color/dark_grey" />
+                android:background="@drawable/parking_categories_shape"
+                android:textColorHint="@color/dark_grey"
+                android:hint="Enter Business Number" />
 
 
-            <ImageView
-
-                android:layout_marginTop="50dp"
-                android:paddingLeft="20dp"
-                android:layout_width="80dp"
-                android:layout_gravity="bottom"
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/business_year"
+                android:layout_width="300dp"
                 android:layout_height="40dp"
-                android:layout_marginBottom="500dp"
-                android:src="@drawable/powered_nbk" />
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+
+                android:background="@drawable/parking_categories_shape" />
 
             <Button
                 android:id="@+id/check_business_status"
@@ -97,24 +104,17 @@
 
                 />
 
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                android:id="@+id/business_year"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="25dp"
+            <ImageView
 
-                android:background="@drawable/parking_categories_shape" />
+                android:layout_marginTop="50dp"
+                android:paddingLeft="20dp"
+                android:layout_gravity="bottom"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:src="@drawable/powered_nbk"
+                android:layout_marginBottom="500dp" />
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:text="All input fields are required"
-        android:textColor="@color/gray"
-        android:textSize="12dp" />
 
     <include layout="@layout/ubp_response" />
 

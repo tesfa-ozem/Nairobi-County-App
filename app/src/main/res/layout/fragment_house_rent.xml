@@ -41,15 +41,23 @@
 
         <ImageView
             android:id="@+id/cancel_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:layout_gravity="end"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/cancel" />
 
 
     </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:text="All input fields are required"
+        android:textSize="12dp"
+        android:textColor="@color/gray" />
 
     <ScrollView
         android:id="@+id/houseRentform"
@@ -97,6 +105,14 @@
                 android:textColorHint="@color/dark_grey"
                 app:hintText="Select House Number" />
 
+            <ProgressBar
+                android:id="@+id/loading_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/check_rent_status"
                 android:layout_width="240dp"
@@ -105,9 +121,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginRight="10dp"
+                android:textColor="@color/white"
                 android:background="@drawable/button_shape"
-                android:text="Check Status"
-                android:textColor="@color/white" />
+                android:text="Check Status" />
 
             <ImageView
 
@@ -118,25 +134,9 @@
                 android:layout_marginBottom="200dp"
                 android:paddingLeft="20dp"
                 android:src="@drawable/powered_nbk" />
-
-            <ProgressBar
-                android:id="@+id/loading_content"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:visibility="gone" />
         </LinearLayout>
 
     </ScrollView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:text="All input fields are required"
-        android:textColor="@color/gray"
-        android:textSize="12dp" />
 
     <include layout="@layout/house_rent_details" />
 

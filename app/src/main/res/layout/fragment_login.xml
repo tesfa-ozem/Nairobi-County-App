@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    android:scrollbarAlwaysDrawVerticalTrack="false"
-    tools:context=".fragments.LoginFragment">
+    tools:context=".fragments.LoginFragment"
+    android:scrollbarAlwaysDrawVerticalTrack="false">
 
     <LinearLayout
 
@@ -25,9 +25,9 @@
                 android:id="@+id/cancel_form"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
+                android:layout_gravity="end"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_gravity="end"
                 android:src="@drawable/cancel" />
         </FrameLayout>
         <LinearLayout
@@ -45,14 +45,67 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/nairobi_city_county_logo_seeklog" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:textColorHint="@color/black"
+                    android:hint="User Name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/user_name"
+                        android:drawableStart="@drawable/user_name"
+                        android:drawablePadding="5dp"
+                        android:id="@+id/login_user_name"
+
+                        android:textColor="@color/black"
+                        android:inputType="textAutoComplete"
+                        android:maxLines="4" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+
+                    android:hint="@string/login_password_hint"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:textColorHint="@color/black">
+
+                    <EditText
+                        android:id="@+id/login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_lock"
+                        android:drawableStart="@drawable/ic_lock"
+                        android:drawablePadding="5dp"
+
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textColor="@color/black" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
             <Button
-                android:id="@+id/login"
                 android:layout_width="140sp"
                 android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:id="@+id/login"
                 android:background="@drawable/button_shape"
-                android:text="Login" />
+                android:text="Login"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/loginViewsMargin" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -75,74 +128,21 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:background="@drawable/background_shape_preset_time_button"
+                    android:textStyle="bold"
                     android:text="Sign Up"
-                    android:textColor="#2196F3"
-                    android:textStyle="bold" />
+                    android:textColor="#2196F3" />
             </FrameLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
-
-                <android.support.design.widget.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                    android:layout_marginTop="@dimen/loginViewsMargin"
-                    android:layout_width="match_parent"
-                    android:hint="User Name"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="@color/black">
-
-                    <EditText
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/user_name"
-                        android:id="@+id/login_user_name"
-                        android:drawablePadding="5dp"
-                        android:drawableStart="@drawable/user_name"
-
-                        android:maxLines="4"
-                        android:inputType="textAutoComplete"
-                        android:textColor="@color/black" />
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                    android:layout_marginTop="@dimen/loginViewsMargin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/login_password_hint"
-                    android:textColorHint="@color/black">
-
-                    <EditText
-                        android:id="@+id/login_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_lock"
-                        android:drawableStart="@drawable/ic_lock"
-                        android:drawablePadding="5dp"
-
-                        android:inputType="textPassword"
-                        android:maxLines="1"
-                        android:textColor="@color/black" />
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
 
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/sign_up_form"
-            android:layout_width="match_parent"
+            android:visibility="gone"
 
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:orientation="vertical">
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -154,44 +154,9 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/sign_up"
-                        android:layout_width="140sp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/loginViewsMargin"
-                        android:background="@drawable/button_shape"
-                        android:text="Sign Up" />
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
-
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="left"
-                            android:layout_marginBottom="20dp"
-                            android:paddingLeft="20dp"
-                            android:src="@drawable/powered_nbk" />
-
-                        <TextView
-                            android:id="@+id/nav_to_login"
-                            android:layout_width="99dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:background="@drawable/background_shape_preset_time_button"
-                            android:text="Login"
-                            android:textColor="#2196F3"
-                            android:textStyle="bold" />
-                    </FrameLayout>
-
                     <ImageView
-                        android:layout_gravity="center"
                         android:layout_marginTop="20dp"
+                        android:layout_gravity="center"
                         android:layout_width="70sp"
                         android:layout_height="70sp"
                         android:src="@drawable/nairobi_city_county_logo_seeklog" />
@@ -207,99 +172,99 @@
                         <android.support.design.widget.TextInputLayout
 
                             android:layout_height="wrap_content"
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                             android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                             android:layout_marginTop="@dimen/loginViewsMargin"
-                            android:hint="Full Names"
-                            android:textColorHint="@color/black">
+                            android:textColorHint="@color/black"
+                            android:hint="Full Names">
 
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/user_name"
-                                android:id="@+id/full_names"
-                                android:drawablePadding="5dp"
                                 android:drawableStart="@drawable/user_name"
-                                android:maxLines="1"
+                                android:drawablePadding="5dp"
+                                android:id="@+id/full_names"
+                                android:textColor="@color/black"
                                 android:inputType="textEmailAddress"
-                                android:textColor="@color/black" />
+                                android:maxLines="1" />
                         </android.support.design.widget.TextInputLayout>
 
                         <android.support.design.widget.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:textColorHint="@color/black"
                             android:hint="Id number"
-                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/loginViewsMargin"
-                            android:textColorHint="@color/black">
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
 
                             <EditText
                                 android:id="@+id/id_number"
-                                android:drawableStart="@drawable/ic_card"
                                 android:drawableLeft="@drawable/ic_card"
+                                android:drawableStart="@drawable/ic_card"
                                 android:drawablePadding="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:maxLines="1"
-                                android:textColor="@color/black" />
+                                android:textColor="@color/black"
+                                android:maxLines="1" />
                         </android.support.design.widget.TextInputLayout>
 
                         <android.support.design.widget.TextInputLayout
 
                             android:layout_height="wrap_content"
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                             android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                             android:layout_marginTop="@dimen/loginViewsMargin"
-                            android:hint="Phone Number"
-                            android:textColorHint="@color/black">
+                            android:textColorHint="@color/black"
+                            android:hint="Phone Number">
 
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_phone"
-                                android:id="@+id/phoneNumber"
-                                android:drawablePadding="5dp"
                                 android:drawableStart="@drawable/ic_phone"
-                                android:maxLines="1"
+                                android:drawablePadding="5dp"
+                                android:id="@+id/phoneNumber"
+                                android:textColor="@color/black"
                                 android:inputType="phone"
-                                android:textColor="@color/black" />
+                                android:maxLines="1" />
 
                         </android.support.design.widget.TextInputLayout>
 
                         <android.support.design.widget.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:textColorHint="@color/black"
                             android:hint="Email"
                             android:inputType="textEmailAddress"
-                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/loginViewsMargin"
-                            android:textColorHint="@color/black">
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
 
                             <EditText
-                                android:id="@+id/email"
-                                android:drawableStart="@drawable/ic_email_black_24dp"
                                 android:drawableLeft="@drawable/ic_email_black_24dp"
+                                android:drawableStart="@drawable/ic_email_black_24dp"
+                                android:drawablePadding="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:drawablePadding="5dp"
+                                android:textColor="@color/black"
                                 android:inputType="textEmailAddress"
                                 android:maxLines="1"
-                                android:textColor="@color/black" />
+                                android:id="@+id/email" />
                         </android.support.design.widget.TextInputLayout>
 
                         <android.support.design.widget.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:textColorHint="@color/black"
                             android:hint="User Name"
                             android:inputType="text"
-                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/loginViewsMargin"
-                            android:textColorHint="@color/black">
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
 
                             <EditText
                                 android:id="@+id/sign_up_username"
-                                android:drawableStart="@drawable/ic_user_name"
                                 android:drawableLeft="@drawable/ic_user_name"
+                                android:drawableStart="@drawable/ic_user_name"
                                 android:drawablePadding="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -310,18 +275,18 @@
                         </android.support.design.widget.TextInputLayout>
 
                         <android.support.design.widget.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:textColorHint="@color/black"
                             android:hint="Password"
                             android:inputType="textPassword"
-                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/loginViewsMargin"
-                            android:textColorHint="@color/black">
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
 
                             <EditText
                                 android:id="@+id/password"
-                                android:drawableStart="@drawable/ic_lock"
                                 android:drawableLeft="@drawable/ic_lock"
+                                android:drawableStart="@drawable/ic_lock"
                                 android:drawablePadding="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -333,18 +298,18 @@
 
                         <android.support.design.widget.TextInputLayout
                             android:id="@+id/confirm_password_layout"
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:textColorHint="@color/black"
                             android:hint="Confirm Password"
                             android:inputType="textPassword"
-                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/loginViewsMargin"
-                            android:textColorHint="@color/black">
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
 
                             <EditText
                                 android:id="@+id/confirm_password"
-                                android:drawableStart="@drawable/ic_lock"
                                 android:drawableLeft="@drawable/ic_lock"
+                                android:drawableStart="@drawable/ic_lock"
                                 android:drawablePadding="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -355,6 +320,41 @@
                         </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
+
+                    <Button
+                        android:layout_width="140sp"
+                        android:layout_height="40dp"
+                        android:id="@+id/sign_up"
+                        android:background="@drawable/button_shape"
+                        android:text="Sign Up"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/loginViewsMargin" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_marginBottom="20dp"
+                            android:paddingLeft="20dp"
+                            android:layout_gravity="left"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/powered_nbk" />
+
+                        <TextView
+                            android:id="@+id/nav_to_login"
+                            android:layout_width="99dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/background_shape_preset_time_button"
+                            android:textStyle="bold"
+                            android:text="Login"
+                            android:textColor="#2196F3" />
+                    </FrameLayout>
 
 
                 </LinearLayout>

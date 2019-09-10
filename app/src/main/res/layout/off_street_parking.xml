@@ -8,37 +8,38 @@
     android:animateLayoutChanges="true"
     android:visibility="gone">
 
-    <Button
-        android:id="@+id/proceed_offstreet"
-        android:layout_width="242dp"
-        android:layout_height="45dp"
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/vehicle_category_offstreet"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/parking_categories_shape"
+        app:hintText="Select Vehicle Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/offStreet_zones"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_gravity="center"
 
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/button_shape"
-        android:text="Proceed"
-        android:textColor="@color/white"
+        android:background="@drawable/parking_categories_shape"
+        app:hintText="Select Zone Category"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parkingRate_offstreet" />
-
-    <ImageView
-
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="8dp"
-        android:paddingLeft="20dp"
-        android:src="@drawable/powered_nbk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/proceed_offstreet" />
+        app:layout_constraintTop_toBottomOf="@+id/vehicle_category_offstreet"
+        android:visibility="gone" />
 
 
     <EditText
@@ -95,37 +96,36 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-        android:id="@+id/vehicle_category_offstreet"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/parking_categories_shape"
-        android:visibility="gone"
-        app:hintText="Select Vehicle Category"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-        android:id="@+id/offStreet_zones"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
+    <Button
+        android:id="@+id/proceed_offstreet"
+        android:layout_width="242dp"
+        android:layout_height="45dp"
         android:layout_gravity="center"
 
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/parking_categories_shape"
-        android:visibility="gone"
+        android:background="@drawable/button_shape"
+        android:text="Proceed"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:hintText="Select Zone Category"
-        app:layout_constraintTop_toBottomOf="@+id/vehicle_category_offstreet" />
+        app:layout_constraintTop_toBottomOf="@+id/parkingRate_offstreet" />
+
+    <ImageView
+
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:paddingLeft="20dp"
+        android:src="@drawable/powered_nbk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proceed_offstreet" />
 
 </android.support.constraint.ConstraintLayout>

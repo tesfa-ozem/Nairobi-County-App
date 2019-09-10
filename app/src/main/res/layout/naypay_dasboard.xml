@@ -4,26 +4,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:background="#FFFFFF">
 
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="260dp"
-        android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsingToolbarLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:fitsSystemWindows="true">
 
             <include
                 layout="@layout/activity_main"
@@ -42,8 +42,8 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#05ADB3AD"
-                app:layout_collapseMode="pin">
+                app:layout_collapseMode="pin"
+                android:background="#05ADB3AD">
 
             </android.support.v7.widget.Toolbar>
 
@@ -68,25 +68,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <ImageView
-
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:layout_gravity="bottom"
-                android:paddingLeft="20dp"
-                android:src="@drawable/powered_nbk" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <include
-
-                    layout="@layout/second_dashboard" />
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/access"
@@ -142,6 +123,25 @@
 
 
                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <include
+
+                    layout="@layout/second_dashboard" />
+            </LinearLayout>
+
+            <ImageView
+
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:paddingLeft="20dp"
+                android:src="@drawable/powered_nbk" />
 
         </LinearLayout>
 

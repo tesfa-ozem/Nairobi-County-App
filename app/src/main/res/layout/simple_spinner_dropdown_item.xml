@@ -10,7 +10,7 @@
     android:height="40dp"
     android:minHeight="40dp"
     android:ellipsize="marquee"
-    android:paddingLeft="30dp"
-    android:paddingStart="30dp"
     android:singleLine="true"
-    android:textColor="@android:color/black" />
+    android:paddingStart="30dp"
+    android:textColor="@android:color/black"
+    android:paddingLeft="30dp" />

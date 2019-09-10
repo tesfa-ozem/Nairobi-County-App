@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:animateLayoutChanges="true"
@@ -31,15 +31,25 @@
 
         <ImageView
             android:id="@+id/cancel_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:layout_gravity="end"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/cancel" />
 
 
     </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:text="All input fields are required"
+        android:textSize="12dp"
+        android:textColor="@color/gray"
+        android:layout_marginBottom="10dp" />
+
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -65,12 +75,12 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:clickable="true"
-                android:checked="true"
+                app:chipBackgroundColor="@color/selected_chip"
                 android:text="Single"
                 android:textColor="@color/chip_text"
                 android:fontFamily="@font/roboto_medium"
-                android:textSize="16dp"
-                app:chipBackgroundColor="@color/selected_chip" />
+                android:checked="true"
+                android:textSize="16dp" />
 
             <android.support.design.chip.Chip
                 android:id="@+id/seasonal_parking"
@@ -81,12 +91,12 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="4dp"
                 android:clickable="true"
-                android:text="Multiple"
+                app:chipBackgroundColor="@color/selected_chip"
 
                 android:textColor="@color/chip_text"
                 android:fontFamily="@font/roboto_medium"
                 android:textSize="16dp"
-                app:chipBackgroundColor="@color/selected_chip" />
+                android:text="Multiple" />
 
             <android.support.design.chip.Chip
                 android:id="@+id/topUp"
@@ -97,11 +107,11 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="4dp"
                 android:clickable="true"
-                android:fontFamily="@font/roboto_medium"
+                app:chipBackgroundColor="@color/selected_chip"
                 android:text="Top Up"
                 android:textColor="@color/chip_text"
-                android:textSize="16dp"
-                app:chipBackgroundColor="@color/selected_chip" />
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16dp" />
 
             <android.support.design.chip.Chip
                 android:id="@+id/offStreet"
@@ -112,16 +122,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="4dp"
                 android:clickable="true"
-                android:fontFamily="@font/roboto_medium"
+                app:chipBackgroundColor="@color/selected_chip"
                 android:text="Off Street"
                 android:textColor="@color/chip_text"
-                android:textSize="16dp"
-                app:chipBackgroundColor="@color/selected_chip" />
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16dp" />
         </android.support.design.chip.ChipGroup>
 
     </HorizontalScrollView>
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -137,43 +145,36 @@
             android:orientation="vertical"
             android:visibility="visible">
 
-            <Button
-                android:id="@+id/proceed_daily_parking"
-                android:layout_width="240dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="10dp"
-
-                android:background="@drawable/button_shape"
-                android:text="Proceed"
-                android:textColor="@color/white" />
-
-            <EditText
-                android:id="@+id/number_plate"
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/duration_categories"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/parking_categories_shape"
-                android:hint="Number Plate"
-                android:inputType="textCapCharacters"
-                android:paddingStart="20dp"
-                android:paddingLeft="12dp"
+                app:hintText="Select Parking Category" />
 
-                android:textColor="@android:color/black"
-                android:textColorHint="@color/dark_grey"
-                tools:ignore="RtlSymmetry" />
-
-
-            <ImageView
-
-                android:layout_width="80dp"
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/search_vehicle_category"
+                android:layout_width="300dp"
                 android:layout_height="40dp"
-                android:layout_gravity="bottom"
-                android:paddingLeft="20dp"
-                android:src="@drawable/powered_nbk" />
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parking_categories_shape"
+                app:hintText="Select Vehicle Category"
+
+                />
+
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/zone_categories"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/parking_categories_shape"
+                android:visibility="gone"
+                app:hintText="Select Zone Category" />
 
             <LinearLayout
                 android:id="@+id/parkingRate"
@@ -207,36 +208,43 @@
             </LinearLayout>
 
 
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                android:id="@+id/duration_categories"
+            <EditText
+                android:id="@+id/number_plate"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/parking_categories_shape"
-                app:hintText="Select Parking Category" />
+                android:hint="Number Plate"
+                android:inputType="textCapCharacters"
+                android:paddingStart="20dp"
+                android:paddingLeft="12dp"
+
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/dark_grey"
+                tools:ignore="RtlSymmetry" />
 
 
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                android:id="@+id/search_vehicle_category"
-                android:layout_width="300dp"
+            <Button
+                android:id="@+id/proceed_daily_parking"
+                android:layout_width="240dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/parking_categories_shape"
-                app:hintText="Select Vehicle Category"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
 
-                />
+                android:background="@drawable/button_shape"
+                android:text="Proceed"
+                android:textColor="@color/white" />
 
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                android:id="@+id/zone_categories"
-                android:layout_width="300dp"
+            <ImageView
+
+                android:layout_width="80dp"
                 android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/parking_categories_shape"
-                android:visibility="gone"
-                app:hintText="Select Zone Category" />
+                android:layout_gravity="bottom"
+                android:paddingLeft="20dp"
+                android:src="@drawable/powered_nbk" />
 
         </LinearLayout>
 
@@ -248,14 +256,6 @@
 
 
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:layout_marginBottom="10dp"
-        android:text="All input fields are required"
-        android:textColor="@color/gray"
-        android:textSize="12dp" />
 
 
 </LinearLayout>

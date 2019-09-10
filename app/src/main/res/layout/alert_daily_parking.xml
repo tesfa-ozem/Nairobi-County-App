@@ -1,31 +1,19 @@
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#FDFDFD"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="30dp"
-
-        android:background="@drawable/button_shape_cancel"
-        android:text="Cancel"
-        android:visibility="gone" />
     <FrameLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
 
         android:layout_marginTop="5dp"
 
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
 
         <ImageView
@@ -36,36 +24,46 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             android:paddingEnd="10dp"
-            android:paddingRight="10dp"
-            android:src="@drawable/cancel" />
+            android:src="@drawable/cancel"
+            android:paddingRight="10dp" />
 
 
     </FrameLayout>
-
     <LinearLayout
         android:layout_marginTop="50dp"
-        android:background="#05A07A"
         android:gravity="center"
+        android:orientation="horizontal"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:background="#05A07A">
         <TextView
             android:layout_gravity="center"
-            android:text="Waiting for customer to complete payment"
+            android:textAlignment="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center" />
+            android:text="Waiting for customer to complete payment" />
 
     </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions to Pay :"
+        android:textColor="#504F4F"
+        android:textSize="18dp"
+
+        android:fontFamily="@font/roboto_medium" />
 
     <TextView
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mpesa_message"
+        android:textColor="#504F4F"
         android:paddingLeft="30dp"
-        android:textColor="#504F4F" />
+        android:text="@string/mpesa_message" />
 
     <TextView
         android:layout_marginTop="10dp"
@@ -73,27 +71,29 @@
         android:layout_height="wrap_content"
         android:paddingLeft="60dp"
         android:textColor="@color/black"
-        android:text="...validating your transaction"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:text="...validating your transaction" />
 
-    <TextView
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
-        android:text="Instructions to Pay :"
-        android:textColor="#504F4F"
-
-        android:textSize="18dp" />
-
-    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_marginBottom="20dp"
+    <com.github.ybq.android.spinkit.SpinKitView android:layout_marginBottom="20dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         style="@style/SpinKitView.Large.Circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:SpinKit_Color="@color/colorAccent" />
+
+    <Button
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+
+        android:text="Cancel"
+        android:background="@drawable/button_shape_cancel"
+        android:layout_marginBottom="30dp" />
 
 
 </LinearLayout>

@@ -1,10 +1,10 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     app:layout_behavior="@string/bottom_sheet_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
 
     >
 
@@ -18,9 +18,9 @@
 
         <ImageView
             android:id="@+id/back_action"
-            android:layout_gravity="start"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:layout_gravity="start"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_back_button"
@@ -41,15 +41,23 @@
 
         <ImageView
             android:id="@+id/cancel_action"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:layout_gravity="end"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/cancel" />
 
 
     </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:text="All input fields are required"
+        android:textSize="12dp"
+        android:textColor="@color/gray" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -109,41 +117,28 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/landRateCard"
-            android:layout_marginTop="20dp"
+            android:visibility="gone"
             android:orientation="vertical"
-            android:padding="20dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone">
-
-            <Button
-                android:id="@+id/proceedLand"
-
-                android:layout_width="240dp"
-                android:layout_height="40dp"
-
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/button_shape"
-                android:text="Proceed To Pay"
-                android:textColor="@android:color/white"
-                android:layout_gravity="center"
-                android:visibility="gone" />
+            android:padding="20dp">
 
             <LinearLayout
 
-                android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:padding="10dp">
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_height="wrap_content"
-                    android:text="Plot Number"
-                    android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Plot Number"
 
                     android:layout_width="wrap_content"
-                    android:textStyle="bold" />
+                    android:layout_height="wrap_content" />
 
                 <TextView
                     android:id="@+id/plot_number"
@@ -156,92 +151,92 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:padding="10dp"
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:textSize="18dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:text="Plot Owner"
 
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
                 <TextView
                     android:id="@+id/plotOwner"
-                    android:layout_width="wrap_content"
+                    android:textSize="14dp"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    tools:text="CBD" />
+                    tools:text="CBD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
 
-                android:layout_width="match_parent"
+                android:padding="10dp"
 
 
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Address"
-                    android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Address"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold" />
+                    android:layout_width="wrap_content" />
 
                 <TextView
                     android:id="@+id/address"
-                    android:layout_width="wrap_content"
+                    android:textSize="14dp"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    tools:text="Nairob" />
+                    tools:text="Nairob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
 
-                android:layout_width="match_parent"
+                android:padding="10dp"
 
 
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:text="UPN"
-                    android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="UPN"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold" />
+                    android:layout_width="wrap_content" />
 
                 <TextView
                     android:id="@+id/upn_land"
-                    android:layout_width="wrap_content"
+                    android:textSize="14dp"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    tools:text="Nairob" />
+                    tools:text="Nairob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
 
-                android:layout_width="match_parent"
+                android:padding="10dp"
 
 
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -263,120 +258,120 @@
 
             <LinearLayout
 
-                android:layout_width="match_parent"
+                android:padding="10dp"
 
 
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Penalty"
-                    android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Penalty"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold" />
+                    android:layout_width="wrap_content" />
 
                 <TextView
                     android:id="@+id/penalty"
-                    android:layout_width="wrap_content"
+                    android:textSize="14dp"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    tools:text="KSH 0.0" />
+                    tools:text="KSH 0.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
 
-                android:layout_width="match_parent"
+                android:padding="10dp"
 
 
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Ground Rent"
-                    android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Ground Rent"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold" />
+                    android:layout_width="wrap_content" />
 
                 <TextView
                     android:id="@+id/ground_Rent"
-                    android:layout_width="wrap_content"
+                    android:textSize="14dp"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    tools:text="KSH 0.0" />
+                    tools:text="KSH 0.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
 
-                android:layout_width="match_parent"
+                android:padding="10dp"
 
 
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Annual Amount"
-                    android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Annual Amount"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold" />
+                    android:layout_width="wrap_content" />
 
                 <TextView
                     android:id="@+id/annual_amount"
-                    android:layout_width="wrap_content"
+                    android:textSize="14dp"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    tools:text="KSH 0.0" />
+                    tools:text="KSH 0.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
 
-                android:layout_width="match_parent"
+                android:padding="10dp"
 
 
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Total Arrears"
-                    android:textColor="@color/black"
                     android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Total Arrears"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold" />
+                    android:layout_width="wrap_content" />
 
                 <TextView
                     android:id="@+id/total_arrears"
-                    android:layout_width="wrap_content"
+                    android:textSize="14dp"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    tools:text="KSH 0.0" />
+                    tools:text="KSH 0.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
 
-                android:layout_height="wrap_content"
+                android:padding="10dp"
 
 
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:padding="10dp">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -388,73 +383,86 @@
 
                 <TextView
                     android:id="@+id/current_balance"
-                    android:layout_width="wrap_content"
+                    android:textSize="14dp"
                     android:fontFamily="@font/roboto_medium"
                     android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    tools:text="KSH 0.0" />
+                    tools:text="KSH 0.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_gravity="right"
-                android:layout_width="wrap_content"
-
-                android:orientation="vertical"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primaryDarkColor"
-                    android:text="Amount"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/EamountToPay"
-                    android:layout_width="wrap_content"
-                    android:fontFamily="@font/roboto_light"
-                    android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="30dp"
-                    tools:text="KSH 0.0" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Arrears"
-                    android:textColor="@color/black"
-                    android:textSize="18dp"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:textColor="@color/menu_items"
-                    android:layout_height="wrap_content"
-                    android:textSize="14dp"
-                    tools:text="KSH 0.0" />
-            </LinearLayout>
-
 
             <View
                 android:layout_width="300dp"
                 android:layout_height="0.5dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
                 android:background="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp" />
+
+            <LinearLayout
+                android:layout_gravity="right"
+                android:paddingTop="5dp"
+
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryDarkColor"
+                    android:text="Amount"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+
+                <TextView
+                    android:id="@+id/EamountToPay"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/menu_items"
+                    tools:text="KSH 0.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Arrears"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+
+                <TextView
+                    android:textSize="14dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/menu_items"
+                    tools:text="KSH 0.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <Button
+                android:visibility="gone"
+
+                android:id="@+id/proceedLand"
+                android:text="Proceed To Pay"
+
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_shape"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp" />
 
 
         </LinearLayout>
@@ -462,14 +470,6 @@
     </LinearLayout>
 
     </ScrollView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:text="All input fields are required"
-        android:textColor="@color/gray"
-        android:textSize="12dp" />
 
 
 </LinearLayout>

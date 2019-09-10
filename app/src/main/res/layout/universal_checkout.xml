@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="2dp"
-    tools:ignore="MissingPrefix">
+    tools:ignore="MissingPrefix"
+    android:padding="2dp">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -36,51 +36,18 @@
             android:src="@drawable/cancel" />
     </FrameLayout>
 
-    <ImageView
-
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="20dp"
-        android:paddingLeft="20dp"
-        android:src="@drawable/powered_nbk" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="70dp">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/payment_options"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-
-                    />
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:text="Choose Payment Method"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textStyle="bold" />
+            <include layout="@layout/house_rent_response" />
 
 
             <android.support.v7.widget.RecyclerView
@@ -92,7 +59,31 @@
                 />
 
 
-            <include layout="@layout/house_rent_response" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Choose Payment Method"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/payment_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    />
+            </LinearLayout>
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -130,4 +121,13 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="20dp"
+        android:layout_gravity="bottom"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:src="@drawable/powered_nbk" />
 </LinearLayout>
